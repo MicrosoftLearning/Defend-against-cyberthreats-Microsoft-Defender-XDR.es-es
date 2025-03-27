@@ -113,7 +113,7 @@ En esta tarea, configurarás los grupos de dispositivos que permiten el control 
     |Configuración general|Value|
     |---|---|
     |Nombre del grupo de dispositivos|**Regular**|
-    |Nivel de corrección|Completo: corregir las amenazas automáticamente|
+    |Nivel de corrección|Completo: corrección|
 
 1. Seleccione **Siguiente**.
 
