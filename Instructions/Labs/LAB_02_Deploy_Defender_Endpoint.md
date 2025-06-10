@@ -20,7 +20,7 @@ Este ejercicio debería tardar aproximadamente **15** minutos en completarse.
 
 ### Tarea 1: inicialización de Microsoft Defender para puntos de conexión
 
-En esta tarea, realizará la inicialización de Microsoft Defender para punto de conexión.
+En esta tarea, realizarás la inicialización de Microsoft Defender para punto de conexión.
 
 1. Inicia sesión en la máquina virtual **WIN1** como administrador con la contraseña: **Pa55w.rd**.  
 
@@ -73,30 +73,45 @@ En esta tarea, incorporarás un dispositivo para Microsoft Defender para puntos 
 
 ### Tarea 3: configurar roles
 
-En esta tarea, configurarás los roles para usarlos con grupos de dispositivos.
+En esta tarea, configurarás roles para su uso con grupos de dispositivos.
 
-1. En la barra de menú izquierda del portal de Microsoft Defender XDR, expande la sección **Sistema**, selecciona **Configuración** y luego selecciona **Puntos de conexión**.
+1. En el menú de navegación del portal Microsoft Defender XDR, expande la sección **Sistema**, selecciona **Configuración** y luego selecciona **Microsoft Defender XDR**.
 
-1. En el área Permisos, selecciona **Roles**.
+1. Selecciona **Permisos y roles** en la sección *Cuenta*.
 
-1. Seleccione el botón **Activar roles**.
+1. Desplázate hacia abajo en la página y selecciona el vínculo **Ir a permisos y roles**.
 
-1. Seleccione **+Agregar rol**.
+1. En la página *Permisos y roles*, selecciona **+ Crear rol personalizado**.
 
-1. En el cuadro de diálogo Añadir rol, introduce las siguientes opciones:
+1. En la página *Datos básicos* del cuadro de diálogo Agregar rol, escribe lo siguiente:
 
-    |Configuración general|Value|
+    |Valor Datos básicos|Valor|
     |---|---|
     |Nombre de rol|**Soporte técnico de nivel 1**|
-    |Permisos|Funciones avanzadas de respuesta dinámica|
 
 1. Seleccione **Siguiente**.
 
-1. Selecciona la pestaña **Grupos de usuarios asignados** en la parte superior. Selecciona **sg-IT** y luego selecciona **Agregar grupos seleccionados**. Asegúrate de que aparezca en *Grupos de usuarios de Azure AD con este rol*.
+1. En la página **Permisos**, selecciona los siguientes permisos:
+
+    |Grupo de permisos |Descripción|  |Operaciones de seguridad |Administra las operaciones diarias y responde a incidentes y avisos|
+
+1. En la página emergente de *operaciones de seguridad*, selecciona el botón de radio **Todos los permisos de lectura y administración**.
+
+1. Selecciona **Aplicar** y, después, **Siguiente**.
+
+1. En la página **Asignar usuarios y orígenes de datos**, selecciona el botón **Crear asignación**.
+
+1. En el cuadro de diálogo *Agregar rol*, introduce las siguientes opciones:
+
+    |Configuración de asignación|Valor|
+    |---|---|
+    |Nombre de asignación|**Soporte técnico de nivel 1**|
+    |Employees|****sg-IT**|
+    |Orígenes de datos|**Deje el valor predeterminado**|
+
+1. Selecciona **Agregar** y, a continuación, **Siguiente**.
 
 1. Selecciona **Enviar** y después, **Listo** cuando termines.
-
-    >**Nota:** si recibes el error *"El usuario no puede realizar esta acción, ya que userAuthEnforcementMode es Rbac y esta acción requiere una de las siguientes acciones: RbacV2",* selecciona **Aceptar** y prueba otra vez.
 
 ### Tarea 4: configurar los grupos de dispositivos
 
@@ -117,9 +132,9 @@ En esta tarea, configurarás los grupos de dispositivos que permiten el control 
 
 1. Seleccione **Siguiente**.
 
-1. En la pestaña Dispositivos, para la condición del sistema operativo, selecciona **Windows 10** y **Siguiente**.
+1. En la pestaña Dispositivos, para la condición del sistema operativo, selecciona **Windows 11** y **Siguiente**.
 
-    >**Nota:** algunos proveedores de hospedaje de laboratorio pueden haber configurado imágenes de *Windows 11* para WIN1. Puedes seleccionar una de las dos opciones siguientes:
+    >**Nota:** algunos proveedores de hospedaje de laboratorio pueden tener todavía imágenes de *Windows 10* para WIN1. Puedes seleccionar una de las dos opciones siguientes:
 
 1. En la pestaña Vista previa de dispositivos, el botón *Mostrar vista previa* podría mostrar la máquina virtual WIN1, pero lo más probable es que los datos no se hayan rellenado todavía. Seleccione **Siguiente** para continuar.
 
@@ -127,7 +142,7 @@ En esta tarea, configurarás los grupos de dispositivos que permiten el control 
 
 1. Selecciona **Enviar** y después, **Listo** cuando termines.
 
-1. La configuración del grupo de dispositivos ha cambiado. Selecciona **Aplicar cambios** para comprobar las coincidencias y recalcular las agrupaciones.
+1. En el mensaje de información *La configuración del grupo de dispositivos ha cambiado. Aplicar cambios para comprobar coincidencias y recalcular agrupaciones*, selecciona **Aplicar cambios**.
 
 1. Ahora tendrás dos grupos de dispositivos; "Normal" que acabas de crear y "Dispositivos sin agrupar (valor predeterminado)" con el mismo nivel de corrección.
 
